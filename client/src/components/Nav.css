@@ -1,0 +1,13 @@
+ul li {
+  cursor: pointer;
+}
+
+.menu {
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.menu.open {
+  max-height: 100vh;
+}

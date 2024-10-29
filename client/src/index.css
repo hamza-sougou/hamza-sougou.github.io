@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #0c0c0c;
+  color: #fff;
+}
+
+.josefin {
+  font-family: "Josefin Slab", serif;
+}
