@@ -6,9 +6,11 @@ const Header = () => {
     <div className="w-full h-[100vh]">
       <div className="flex flex-col md:flex-row h-full">
         <div className="flex-1 flex justify-center items-center">
-          <div className="flex flex-col josefin">
-            <h1 className="text-[6rem] ">Hamza</h1>
-            <h2 className="text-[3rem] -mt-[2rem] ">SOUGOU</h2>
+          <div className="flex flex-col josefin items-center">
+            <h1 className="text-[5rem] md:text-[8rem] "> SOUGOU</h1>
+            <h2 className="text-[4rem] md:text-[6rem] -mt-[2.5rem] md:-mt-[3.5rem]">
+              Hamza
+            </h2>
             <hr />
             <h3 className="text-[1.5rem]">Développeur Full-stack</h3>
             <div className="flex mt-[1rem]">
@@ -21,13 +23,13 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className="flex-1 flex justify-end">
+        {/* <div className="flex-1 flex justify-end">
           <img
             src={Me}
             alt="Me"
             className="w-full object-cover overflow-hidden object-top"
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

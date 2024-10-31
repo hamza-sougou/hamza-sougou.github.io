@@ -1,0 +1,14 @@
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.accordion-content.max-h-0 {
+  max-height: 0;
+  opacity: 0;
+}
+
+.accordion-content.max-h-40 {
+  max-height: 10rem;
+  opacity: 1;
+}
