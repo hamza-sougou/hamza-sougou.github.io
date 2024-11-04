@@ -29,7 +29,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="w-full h-[3rem] px-[2rem] absolute py-[1rem] josefin">
+      <div className="w-full h-[3rem] px-[2rem] py-[1rem] top-0 left-0 josefin ">
         <div className="flex w-full">
           <div className="flex-1">
             <div className="flex">
@@ -37,7 +37,7 @@ const Nav = () => {
                 <h1 className="text-2xl">{unchangedText}</h1>
               </div>
               <h1 className="text-3xl">{unchangedText1}</h1>
-              <span className="text-3xl text-orange-400">{text}</span>
+              <span className="text-3xl text-orange">{text}</span>
               <div className="h-full flex pt-[8px]">
                 <Cursor />
               </div>
@@ -61,7 +61,7 @@ const Nav = () => {
       </div>
 
       <div className={`menu ${toggle ? "open" : ""}`}>
-        <div className="flex h-full text-center justify-center  items-center">
+        <div className="flex h-full text-center justify-center items-center z-9999">
           <ul className="flex flex-col justify-between gap-4 text-[4rem] py-[3.4rem] josefin">
             <li>Accueil</li>
             <li>À Propos</li>

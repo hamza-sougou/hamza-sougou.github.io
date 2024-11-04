@@ -2,11 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background: #0c0c0c;
-  color: #fff;
+.dark {
+  --background: #0c0c0c;
+  --color: #fff;
+
+  .josefin {
+    font-family: "Josefin Slab", serif;
+  }
+
+  --orange: 249, 115, 22;
 }
 
-.josefin {
-  font-family: "Josefin Slab", serif;
+.light {
+  --background: #f7f0e5;
+  --color: #0c0c0c;
+
+  border-color: red;
+
+  .josefin {
+    font-family: "Josefin Slab", serif;
+  }
+
+  --orange: 249, 115, 22;
+
+  background: rgba(var(var(--background)));
 }

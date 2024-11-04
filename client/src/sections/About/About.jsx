@@ -13,7 +13,7 @@ const About = () => {
     <div className="w-full h-[100vh] px-[1rem] md:px-[10rem]  md:pt-[2rem] josefin">
       <div className="h-full w-full">
         <div className="text-center">
-          <h1 className="text-[3rem] md:text-[5rem]">À Propos de moi</h1>
+          <h1 className="text-[3rem md:text-[5rem]">À Propos de moi</h1>
           <hr className="mb-5 w-4/5 md:w-[100%]" />
         </div>
         <div className="one flex w-full items-center justify-center">
@@ -26,9 +26,9 @@ const About = () => {
               >
                 <h2 className="text-lg">Qui suis-je ?</h2>
                 {activeIndex === 0 ? (
-                  <MdOutlineArrowDropUp className="text-3xl rotate-[180deg] text-orange-500" />
+                  <MdOutlineArrowDropUp className="text-3xl rotate-[180deg] text-orange" />
                 ) : (
-                  <MdOutlineArrowDropUp className=" text-3xl text-orange-500" />
+                  <MdOutlineArrowDropUp className=" text-3xl text-orange" />
                 )}
               </div>
               <div
@@ -51,9 +51,9 @@ const About = () => {
               >
                 <h2 className="text-lg">Item 2</h2>
                 {activeIndex === 1 ? (
-                  <MdOutlineArrowDropUp className="text-3xl rotate-[180deg] text-orange-500" />
+                  <MdOutlineArrowDropUp className="text-3xl rotate-[180deg] text-orange" />
                 ) : (
-                  <MdOutlineArrowDropUp className=" text-3xl text-orange-500" />
+                  <MdOutlineArrowDropUp className=" text-3xl text-orange" />
                 )}
               </div>
               <div
@@ -79,9 +79,9 @@ const About = () => {
               >
                 <h2 className="text-lg">Item 3</h2>
                 {activeIndex === 2 ? (
-                  <MdOutlineArrowDropUp className="text-3xl rotate-[180deg] text-orange-500" />
+                  <MdOutlineArrowDropUp className="text-3xl rotate-[180deg] text-orange" />
                 ) : (
-                  <MdOutlineArrowDropUp className=" text-3xl text-orange-500" />
+                  <MdOutlineArrowDropUp className=" text-3xl text-orange" />
                 )}
               </div>
               <div

@@ -8,7 +8,11 @@ export default {
       md: "768px",
       lg: "1024px",
     },
-    extend: {},
+    extend: {
+      colors: {
+        orange: "rgba(var(--orange))",
+      },
+    },
   },
   plugins: [],
 };
