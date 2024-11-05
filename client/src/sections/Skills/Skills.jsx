@@ -64,10 +64,8 @@ const SkillStrengthMeter = ({ skill, isVisible }) => {
   return (
     <div className="mt-[2rem]">
       <div className="flex justify-between items-center mb-1">
-        <span className="text-sm text-white">{skill.name}</span>
-        <span className="text-sm text-white">
-          {getStrengthText(skill.level)}
-        </span>
+        <span className="text-sm ">{skill.name}</span>
+        <span className="text-sm">{getStrengthText(skill.level)}</span>
       </div>
 
       <div className="flex space-x-1">
@@ -145,10 +143,12 @@ const App = () => {
   ];
 
   return (
-    <div className="w-full h-[100vh] px-[1rem] md:px-[10rem] md:pt-[2rem] josefin">
+    <div className="w-full h-[100vh] px-[1rem] md:px-[10rem] md:pt-[2rem] josefin ">
       <div className="h-full w-full">
         <div className="text-center">
-          <h1 className="text-[3rem] md:text-[5rem]">Mes Compétences</h1>
+          <h1 className="text-[3rem] md:text-[5rem]" id="skills">
+            Mes Compétences
+          </h1>
           <hr className="mb-5 w-4/5 md:w-[100%]" />
         </div>
         <div

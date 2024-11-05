@@ -9,8 +9,8 @@ import Skills from "./sections/Skills/Skills";
 
 const App = () => {
   return (
-    <html>
-      <body className="dark">
+    <>
+      <body className="bg-[#F7F0E5] dark:bg-[#141414] dark:text-white transition-all">
         <Nav />
         <SocialMedias />
         <Header />
@@ -20,7 +20,7 @@ const App = () => {
         <Contact />
         <Footer />
       </body>
-    </html>
+    </>
   );
 };
 

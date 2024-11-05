@@ -1,6 +1,5 @@
 import { LuGithub } from "react-icons/lu";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
-import "./SocialMedias.css";
 
 const SocialMedias = () => {
   return (
@@ -9,7 +8,7 @@ const SocialMedias = () => {
         <LuGithub />
         <FaLinkedinIn />
         <FaInstagram />
-        <div className="bg-white h-[3rem] w-[1px]"></div>
+        <div className="h-[3rem] w-[1px] bg-[#141414] dark:bg-white"></div>
       </div>
     </div>
   );

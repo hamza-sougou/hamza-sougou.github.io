@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.dark {
-  --background: #0c0c0c;
-  --color: #fff;
-
+:root {
   .josefin {
     font-family: "Josefin Slab", serif;
   }
@@ -13,17 +10,9 @@
   --orange: 249, 115, 22;
 }
 
-.light {
-  --background: #f7f0e5;
-  --color: #0c0c0c;
+html,
+body {
+  scroll-behavior: smooth;
 
-  border-color: red;
-
-  .josefin {
-    font-family: "Josefin Slab", serif;
-  }
-
-  --orange: 249, 115, 22;
-
-  background: rgba(var(var(--background)));
+  margin: 0;
 }

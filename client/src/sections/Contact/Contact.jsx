@@ -1,6 +1,9 @@
 const Contact = () => {
   return (
-    <div className=" w-full min-h-screen px-[1rem] md:px-[10rem] md:pt-[2rem] josefin">
+    <div
+      className=" w-full min-h-screen px-[1rem] md:px-[10rem] md:pt-[2rem] josefin "
+      id="contact"
+    >
       <div className="w-full h-full">
         <div className="text-center">
           <h1 className="text-[3rem] md:text-[5rem]">Contact</h1>
@@ -25,18 +28,18 @@ const Contact = () => {
                     <input
                       type="text"
                       placeholder="Nom"
-                      className="input outline-none ring-1 focus:ring-orange bg-transparent w-full py-4 px-3 transition-all"
+                      className="input outline-none ring-1 ring-[#141414] dark:ring-white focus:ring-orange dark:focus:ring-orange bg-transparent w-full py-4 px-3 transition-all"
                     />
                     <input
                       type="email"
                       placeholder="Email"
-                      className="outline-none ring-1 focus:ring-orange bg-transparent w-full py-4 px-3 transition-all"
+                      className="outline-none ring-1 ring-[#141414] dark:ring-white focus:ring-orange dark:focus:ring-orange bg-transparent w-full py-4 px-3 transition-all"
                     />
                   </div>
                 </div>
                 <div className="flex w-full mt-5">
                   <textarea
-                    className="outline-none ring-1 focus:ring-orange bg-transparent w-full py-4 px-3 min-h-[200px] max-h-[200px] transition-all"
+                    className="outline-none ring-1 ring-[#141414] dark:ring-white focus:ring-orange dark:focus:ring-orange bg-transparent w-full py-4 px-3 min-h-[200px] max-h-[200px] transition-all"
                     placeholder="Message"
                   />
                 </div>
