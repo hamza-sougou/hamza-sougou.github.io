@@ -1,4 +1,26 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_rwtnhav", "template_51jkfo3", form.current, {
+        publicKey: "ztZ1_kyCLUc5d0faJ",
+      })
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div
       className=" w-full min-h-screen px-[1rem] md:px-[10rem] md:pt-[2rem] josefin "
@@ -22,16 +44,22 @@ const Contact = () => {
               </div>
             </div>
             <div className="flex-1 flex w-full">
-              <form action="" className="w-full flex flex-col justify-start">
+              <form
+                onSubmit={sendEmail}
+                ref={form}
+                className="w-full flex flex-col justify-start"
+              >
                 <div className="flex w-full">
                   <div className="flex-1 flex flex-col md:flex-row w-full justify-between gap-5">
                     <input
                       type="text"
+                      name="user_name"
                       placeholder="Nom"
                       className="input outline-none ring-1 ring-[#141414] dark:ring-white focus:ring-orange dark:focus:ring-orange bg-transparent w-full py-4 px-3 transition-all"
                     />
                     <input
                       type="email"
+                      name="user_email"
                       placeholder="Email"
                       className="outline-none ring-1 ring-[#141414] dark:ring-white focus:ring-orange dark:focus:ring-orange bg-transparent w-full py-4 px-3 transition-all"
                     />
@@ -41,9 +69,14 @@ const Contact = () => {
                   <textarea
                     className="outline-none ring-1 ring-[#141414] dark:ring-white focus:ring-orange dark:focus:ring-orange bg-transparent w-full py-4 px-3 min-h-[200px] max-h-[200px] transition-all"
                     placeholder="Message"
+                    name="message"
                   />
                 </div>
-                <button className="mt-5 w-full md:w-2/5 ">
+                <button
+                  type="submit"
+                  value="Send"
+                  className="mt-5 w-full md:w-2/5 "
+                >
                   <div id="button_h" className="ac_btn btn w-full">
                     <h2 className="text-xl my-[0.2rem] mx-[1rem]">Envoyer</h2>
                     <div className="ring one"></div>
