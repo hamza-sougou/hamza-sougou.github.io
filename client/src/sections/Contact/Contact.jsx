@@ -1,11 +1,24 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import "./Contact.css";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const name = form.current.user_name.value.trim();
+    const email = form.current.user_email.value.trim();
+    const message = form.current.message.value.trim();
+
+    if (!name || !email || !message) {
+      toast.error("Tous les champs doivent être remplis", {
+        className: "toast-radius",
+      });
+      return;
+    }
 
     emailjs
       .sendForm("service_rwtnhav", "template_51jkfo3", form.current, {
@@ -14,9 +27,16 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          toast.success("Email envoyé avec succès", {
+            className: "toast-radius",
+          });
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
+          toast.error("Une erreur est survenue, veuillez réessayer", {
+            className: "toast-radius",
+          });
         }
       );
   };

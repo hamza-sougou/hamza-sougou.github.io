@@ -1,10 +1,9 @@
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact, FaNodeJs, FaWordpress } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiTailwindcss, SiVite } from "react-icons/si";
-import Projet1 from "../../assets/projetExample.png";
 import EntraluLogo from "../../assets/entralu-logo.jpg";
 import "./Portfolio.css";
-import { Link } from "react-router-dom";
+import MonLogo from "../../assets/mon-logo.png";
 
 const Portfolio = () => {
   const technologies = [
@@ -33,6 +32,19 @@ const Portfolio = () => {
     [""].includes(tech.techname)
   );
 
+  const sgtBeTechnologies = technologies.filter((tech) =>
+    ["Node.js", "Express.js", "MongoDB"].includes(tech.techname)
+  );
+  const sgtFeTechnologies = technologies.filter((tech) =>
+    ["JavaScript", "React.js"].includes(tech.techname)
+  );
+  const pfBeTechnologies = technologies.filter((tech) =>
+    [""].includes(tech.techname)
+  );
+  const pfFeTechnologies = technologies.filter((tech) =>
+    ["JavaScript", "React.js", "Tailwind.css"].includes(tech.techname)
+  );
+
   const EntraluLink = () => {
     return (
       <a
@@ -45,13 +57,42 @@ const Portfolio = () => {
       </a>
     );
   };
+
+  const PCUGithubLink = () => {
+    return (
+      <a
+        href="https://github.com/hamza-sougou/PC-Universe-MERN-Ecommerce-App"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-orange text-xl font-semibold underline"
+      >
+        Voir le code source
+      </a>
+    );
+  };
+
+  const SGTGithubLink = () => {
+    return (
+      <div className="flex flex-col">
+        <p>Application CRUD de gestion de contact</p>
+        <a
+          href="https://github.com/hamza-sougou/mern_todo_list_app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-orange text-xl font-semibold underline"
+        >
+          Voir le code source
+        </a>
+      </div>
+    );
+  };
+
   const projects = [
     {
       id: 1,
-      image: Projet1,
       name: "PC Universe",
       type: "e-commerce",
-      description: "Api RESTful",
+      description: <PCUGithubLink />,
       BeTechs: pcuBeTechnologies,
       FeTechs: pcuFeTechnologies,
       video: "https://www.youtube.com/embed/Gn5qsb8z2iw?si=KmDMJLJKQ1ZhZXI8",
@@ -68,13 +109,22 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      image: Projet1,
       name: "Système de gestion de tâches",
-      type: "e-commerce",
-      description: "Application CRUD de gestion de contact",
-      BeTechs: pcuBeTechnologies,
-      FeTechs: pcuFeTechnologies,
+      type: "CRUD, API",
+      description: <SGTGithubLink />,
+      BeTechs: sgtBeTechnologies,
+      FeTechs: sgtFeTechnologies,
       video: "https://www.youtube.com/embed/k16XOLEmnvU?si=IMxi4GOXvfapZvIg",
+    },
+    {
+      id: 4,
+      image: MonLogo,
+      name: "Portfolio de Hamza",
+      type: "Vitrine",
+      description: "Mon Portfolio",
+      BeTechs: pfBeTechnologies,
+      FeTechs: pfFeTechnologies,
+      link: "#",
     },
   ];
 
@@ -92,7 +142,7 @@ const Portfolio = () => {
           {projects.map((p) => (
             <div
               key={p.id}
-              className="flex flex-col md:flex-row h-[40rem] md:h-[15rem] w-full mt-5 bg-[#cfcfcf] dark:bg-[#0d0d0d]"
+              className="flex flex-col md:flex-row h-[40rem] md:h-[15rem] w-full mt-5 bg-[#ffe1c5] dark:bg-[#0d0d0d]"
             >
               <div className="w-full md:w-[40%] h-[40%] md:h-full">
                 {p.link ? (

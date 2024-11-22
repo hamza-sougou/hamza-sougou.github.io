@@ -7,9 +7,13 @@ import Header from "./sections/Header/Header";
 import Portfolio from "./sections/portfolio/Portfolio";
 import Skills from "./sections/Skills/Skills";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const App = () => {
   return (
     <>
+      <ToastContainer />
       <body className="bg-[#F7F0E5] dark:bg-[#141414] dark:text-white transition-all">
         <Nav />
         <SocialMedias />

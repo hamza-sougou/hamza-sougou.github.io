@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { TfiClose } from "react-icons/tfi";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -27,10 +27,26 @@ const Nav = () => {
     deleteSpeed: 70,
   });
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const nav = document.getElementById("nav");
+      if (window.scrollY > 0) {
+        nav.classList.add("scroll-shadow");
+      } else {
+        nav.classList.remove("scroll-shadow");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div
-        className="w-full h-[3rem] px-[2rem] py-[1rem] top-0 left-0 josefin "
+        className="w-full h-[3rem] px-[2rem] py-[1rem] bg-[#F7F0E5] dark:bg-[#141414] top-0 left-0 josefin scroll-shadow"
         id="nav"
       >
         <div className="flex w-full">
@@ -53,24 +69,28 @@ const Nav = () => {
             <DarkMode />
             {toggle ? (
               <button>
-                <TfiClose onClick={closeMenu} className="text-3xl" />
+                <TfiClose onClick={closeMenu} className="closebtn text-3xl" />
               </button>
             ) : (
               <button>
-                <CiMenuFries onClick={openMenu} className="text-3xl" />
+                <CiMenuFries onClick={openMenu} className="openbtn text-3xl" />
               </button>
             )}
           </div>
         </div>
       </div>
 
-      <div className={`menu ${toggle ? "open" : ""}`}>
-        <div className="flex h-full text-center justify-center items-center z-9999">
+      <div
+        className={`menu bg-[#F7F0E5] dark:bg-[#141414] ${
+          toggle ? "open" : ""
+        }`}
+      >
+        <div className="flex h-full text-center justify-center items-center ">
           <ul className="flex flex-col justify-between gap-4 text-[4rem] py-[3.4rem] josefin">
             <li>
               <div className="block group">
                 <a
-                  href="#nav"
+                  href="#header"
                   onClick={closeMenu}
                   className="group-hover:text-orange transition-all"
                 >
@@ -82,7 +102,7 @@ const Nav = () => {
             <li>
               <div className="block group">
                 <a
-                  href="#header"
+                  href="#about"
                   onClick={closeMenu}
                   className="group-hover:text-orange transition-all"
                 >
@@ -94,7 +114,7 @@ const Nav = () => {
             <li>
               <div className="block group">
                 <a
-                  href="#about"
+                  href="#skills"
                   onClick={closeMenu}
                   className="group-hover:text-orange transition-all"
                 >
@@ -106,7 +126,7 @@ const Nav = () => {
             <li>
               <div className="block group">
                 <a
-                  href="#skills"
+                  href="#portfolio"
                   onClick={closeMenu}
                   className="group-hover:text-orange transition-all"
                 >
@@ -118,7 +138,7 @@ const Nav = () => {
             <li>
               <div className="block group">
                 <a
-                  href="#portfolio"
+                  href="#contact"
                   onClick={closeMenu}
                   className="group-hover:text-orange transition-all"
                 >

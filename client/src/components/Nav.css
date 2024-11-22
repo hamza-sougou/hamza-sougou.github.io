@@ -1,13 +1,39 @@
-ul li {
-  cursor: pointer;
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease;
+}
+
+#nav.scroll-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .menu {
-  transition: max-height 0.5s ease-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
   overflow: hidden;
   max-height: 0;
+  transition: max-height 0.5s ease-out;
 }
 
 .menu.open {
   max-height: 100vh;
+}
+
+ul li a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+ul li {
+  cursor: pointer;
 }

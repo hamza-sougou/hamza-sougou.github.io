@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-family: JosefinSlabRoman-Regular, 'Josefin Slab';
+        font-size: 339.83px;
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        fill: #ff6700;
+        letter-spacing: 0em;
+      }
+
+      .cls-5 {
+        fill: #0a0a0a;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-5" x="-4" y="-5" width="1927" height="1091"/>
+  <text class="cls-3" transform="translate(427.58 652.04)"><tspan class="cls-1" x="0" y="0">&lt;H</tspan><tspan class="cls-4" x="481.88" y="0">.</tspan><tspan class="cls-2" x="537.27" y="0" xml:space="preserve"> /&gt;</tspan></text>
+</svg>

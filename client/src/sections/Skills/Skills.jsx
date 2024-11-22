@@ -40,11 +40,11 @@ const SkillCriteria = ({ skill }) => {
 const SkillStrengthMeter = ({ skill, isVisible }) => {
   const [animated, setAnimated] = useState(false);
   const levelColors = [
-    "bg-red-500", // Très faible
-    "bg-red-300", // Faible
-    "bg-[#FFF700]", // Moyen
-    "bg-[#ffbb00]", // Bon
-    "bg-[#ffa600]", // Très bon
+    "bg-red-500",
+    "bg-red-300",
+    "bg-[#FFF700]",
+    "bg-[#ffbb00]",
+    "bg-[#ffa600]",
   ];
 
   const getStrengthText = (level) => {
@@ -58,7 +58,6 @@ const SkillStrengthMeter = ({ skill, isVisible }) => {
     }
   }, [isVisible]);
 
-  // Déterminez la couleur à utiliser en fonction du niveau
   const maxLevelColor = levelColors[skill.level - 1];
 
   return (
@@ -81,7 +80,7 @@ const SkillStrengthMeter = ({ skill, isVisible }) => {
                   : "opacity-0"
               }`}
             style={{
-              transitionDelay: `${index * 250}ms`, // Délai pour chaque segment
+              transitionDelay: `${index * 250}ms`,
             }}
           />
         ))}
@@ -132,14 +131,14 @@ const App = () => {
 
   const cssSkills = [
     { name: "Tailwind CSS", level: 5 },
-    { name: "Bootstrap", level: 4 },
-    { name: "Bulma CSS", level: 3 },
+    { name: "Bootstrap CSS", level: 4 },
+    { name: "Bulma CSS & Sass", level: 3 },
   ];
 
   const otherSkills = [
     { name: "Mongo DB", level: 5 },
     { name: "MySQL", level: 4 },
-    { name: "Git", level: 4 },
+    { name: "Wordpress", level: 4 },
   ];
 
   return (
